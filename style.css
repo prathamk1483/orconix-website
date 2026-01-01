@@ -251,6 +251,7 @@ select.dropdown {
 }
 
 @media (max-width: 768px) {
+    .nav-container{ height: 50px; }
     .navbar { width: 95%; padding: 15px 10px; }
     .hamburger { display: block; margin-left: 20px; }
     .nav-links {
