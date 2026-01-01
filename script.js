@@ -142,3 +142,38 @@ document.getElementById('hidden_iframe').onload = function() {
         submitted = false;
     }
 };
+
+
+// ... [Keep your existing Theme Toggle, Mobile Menu, and Form logic here] ...
+
+// --- Scroll Animation Logic ---
+
+// 1. Select all elements we want to animate
+// You can add more selectors here if you want other things to animate
+const scrollElements = document.querySelectorAll(
+    '.hero-content, .section-title, .about-main, .glass-card, .footer-grid, .section-header'
+);
+
+// 2. Add the 'hidden' class to them immediately
+scrollElements.forEach((el) => el.classList.add('hidden'));
+
+// 3. Create the Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            // Element entered viewport: Show it
+            entry.target.classList.add('show');
+        } else {
+            // Element left viewport: Hide it (reset animation)
+            // This creates the "vice versa" effect
+            entry.target.classList.remove('show');
+        }
+    });
+}, {
+    // Threshold: How much of the item must be visible to trigger?
+    // 0.1 means trigger when 10% of the item is visible
+    threshold: 0.1 
+});
+
+// 4. Tell observer to track all our elements
+scrollElements.forEach((el) => observer.observe(el));
