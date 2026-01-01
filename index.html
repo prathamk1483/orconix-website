@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orconix | Digital Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="./assets/Logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img class="logo-img" src="./assets/Logo.png" alt="">
+                <span class="logo-text">Orconix</span>
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-background-glow"></div>
+        <div class="container hero-content center-text">
+            <h1>Transforming Ideas into <br>Powerful Digital Solutions</h1>
+            <p class="hero-subtext">We design and develop tailored software solutions and websites that help businesses streamline operations, enhance user experiences, and drive success.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn btn-outline">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text">About Us</h2>
+            <div class="about-main center-text">
+                <h3 class="big-headline">Your Vision <br><span class="highlight-gold">Our Innovation</span></h3>
+                <p>At Orconix, we deliver custom software and website solutions tailored to business needs. Our expert team builds scalable, secure, and user-friendly digital experiences.</p>
+            </div>
+            <div class="vision-mission-grid">
+                <div class="glass-card">
+                    <h4>Our Vision</h4>
+                    <p>To empower businesses with innovative, custom-built software and website solutions that drive efficiency, growth, and digital transformation.</p>
+                </div>
+                <div class="glass-card">
+                    <h4>Our Mission</h4>
+                    <p>Our mission is to design and develop cutting edge, user centric software and websites that streamline operations and enhance digital experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title glow-text text-left">Our Services</h2>
+            
+            <div class="carousel-mask">
+                <div class="services-showcase">
+                    <div class="service-item glass-card">
+                        <div class="service-content">
+                            <i class="fas fa-code"></i>
+                            <h3>Custom Software</h3>
+                        </div>
+                    </div>
+                    <div class="service-item glass-card active">
+                        <div class="service-content">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Web Development</h3>
+                        </div>
+                    </div>
+                     <div class="service-item glass-card">
+                        <div class="service-content">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>UI/UX Design</h3>
+                        </div>
+                    </div>
+                    <div class="service-item glass-card">
+                        <div class="service-content">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>App Development</h3>
+                        </div>
+                    </div>
+                    <div class="service-item glass-card">
+                        <div class="service-content">
+                            <i class="fas fa-search"></i>
+                            <h3>SEO Optimization</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="slider-controls center-text">
+                 <button class="slider-btn" id="prevBtn"><i class="fas fa-arrow-left"></i></button>
+                 <button class="slider-btn" id="nextBtn"><i class="fas fa-arrow-right"></i></button>
+             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container contact-container">
+            <div class="glass-card contact-form-wrapper">
+                <h2>Send a message</h2>
+                
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                <form 
+                    id="contact-form"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSfq30dUEOupFTA7QJlvsLJrrdKhJrOWnl-_WAavAxDErjQ-VQ/formResponse" 
+                    method="post" 
+                    target="hidden_iframe"
+                    class="contact-form"
+                >
+                    <div class="input-group">
+                        <input type="text" name="entry.846909639" placeholder="Your Name" class="dark-input" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="entry.288714841" placeholder="Your Email" class="dark-input" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="entry.1013250631" placeholder="Subject" class="dark-input" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="entry.1933332794" placeholder="Your Message" rows="5" class="dark-input" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <select class="dark-input dropdown">
+                            <option>General Inquiry</option>
+                            <option>Project Proposal</option>
+                            <option>Support</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn" class="btn btn-submit full-width">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-brand-col">
+                <a href="#" class="footer-logo">
+                    <img class="logo-img" src="./assets/Logo.png" alt="">
+                    <span>Orconix</span>
+                </a>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><svg width="20" height="20" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1836_4214)"><path d="M0.323143 1L11.9058 16.223L0.25 28.6H2.87325L13.0779 17.7638L21.323 28.6H30.25L18.0156 12.5207L28.8648 1H26.2415L16.8436 10.98L9.25018 1H0.323143ZM4.18083 2.89934H8.28193L26.3917 26.7004H22.2906L4.18083 2.89934Z" fill="currentColor"></path></g><defs><clipPath id="clip0_1836_4214"><rect width="30" height="30" fill="white" transform="translate(-0.25)"></rect></clipPath></defs></svg></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <a href="#contact" class="footer-contact-btn">
+                    Contact Us <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <!-- <li><a href="#">Investor Relation</a></li> -->
+                    <!-- <li><a href="#">Leadership</a></li> -->
+                    <!-- <li><a href="#">Newsroom</a></li> -->
+                    <li><a href="#">Careers</a></li>
+                    <!-- <li><a href="#">Community and Belonging</a></li> -->
+                </ul>
+            </div>
+
+            <!-- <div class="footer-links-col">
+                <h4>Why Orconix</h4>
+                <ul>
+                    <li><a href="#">Orconix Cloud Platform</a></li>
+                    <li><a href="#">Our Customers</a></li>
+                    <li><a href="#">Analyst Reports</a></li>
+                    <li><a href="#">Integrations</a></li>
+                    <li><a href="#">Strategic Partners</a></li>
+                    <li><a href="#">Orconix Cloud vs Competitors</a></li>
+                </ul>
+            </div> -->
+
+            <!-- <div class="footer-links-col">
+                <h4>Get The Latest</h4>
+                <ul>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Learn</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Latest Roadshows</a></li>
+                    <li><a href="#">Readiverse Training Zone</a></li>
+                </ul>
+            </div> -->
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright-line"></div>
+                <p>&copy; 2025 Orconix. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
