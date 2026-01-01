@@ -396,3 +396,90 @@ select.dropdown {
         transform: none;
     }
 }
+
+
+/* --- Our Clients (Infinite Marquee) --- */
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 40px 0;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Gradient Masks to fade edges (Professional Look) */
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--card-bg), transparent);
+}
+
+.marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--card-bg), transparent);
+}
+
+.marquee-content {
+    display: flex;
+    gap: 50px; /* Space between logo groups */
+    width: max-content;
+    animation: scroll 20s linear infinite; /* The moving magic */
+}
+
+/* Pause animation on hover so user can look at logos */
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.client-logo-group {
+    display: flex;
+    gap: 80px; /* Space between individual logos */
+}
+.client-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.client-item img {
+    height: 80px; /* Force uniform height */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7); /* Start B&W and slightly see-through */
+    transition: 0.3s ease;
+}
+
+/* On hover, bring back color and full opacity */
+.marquee-wrapper:hover .client-item img {
+    filter: grayscale(0%) opacity(1);
+}
+
+.client-item img:hover {
+    transform: scale(1.1); /* Slight pop on individual logo hover */
+}
+
+/* The Animation Keyframes */
+/* @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move exactly half-way (one full group length) */
+} */
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .marquee-content { animation-duration: 15s; } /* Faster on mobile */
+    .client-logo-group { gap: 40px; }
+    .client-item img { height: 35px; }
+}
