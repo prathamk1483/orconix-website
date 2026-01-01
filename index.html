@@ -55,36 +55,58 @@
             
             <div class="products-grid">
                 
-                <div class="glass-card product-card hidden">
+                <div class="glass-card product-card hidden" 
+                     data-title="Orconix AI" 
+                     data-icon="fas fa-brain"
+                     data-details="Orconix AI is our flagship predictive analytics engine. It integrates with your existing data pipelines to forecast market trends with 98% accuracy. Features include real-time dashboarding, anomaly detection, and automated reporting. Perfect for finance and retail sectors looking to optimize inventory and investment strategies.">
                     <div class="product-badge">New</div>
-                    <div class="product-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
+                    <div class="product-icon"><i class="fas fa-brain"></i></div>
                     <h3>Orconix AI</h3>
-                    <p>An intelligent analytics platform that predicts market trends and optimizes business workflows using advanced machine learning.</p>
+                    <p>An intelligent analytics platform that predicts market trends and optimizes business workflows.</p>
                     <a href="#" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <div class="glass-card product-card hidden">
-                    <div class="product-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
+                <div class="glass-card product-card hidden"
+                     data-title="SecureVault" 
+                     data-icon="fas fa-shield-alt"
+                     data-details="SecureVault offers military-grade encryption for enterprise data at rest and in transit. Our zero-trust architecture ensures that your sensitive information remains inaccessible to unauthorized users. It includes biometric authentication support, 24/7 threat monitoring, and automated compliance reporting for GDPR and HIPAA.">
+                    <div class="product-icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>SecureVault</h3>
-                    <p>Enterprise-grade cybersecurity solution designed to protect sensitive data with military-grade encryption standards.</p>
+                    <p>Enterprise-grade cybersecurity solution designed to protect sensitive data with military-grade encryption.</p>
                     <a href="#" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
 
-                <div class="glass-card product-card hidden">
-                    <div class="product-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Archify</h3>
-                    <p>A platform for managing client for the architectural firms.</p>
+                <div class="glass-card product-card hidden"
+                     data-title="CloudSync" 
+                     data-icon="fas fa-cloud"
+                     data-details="CloudSync bridges the gap between legacy on-premise systems and modern cloud infrastructure. It allows for seamless bi-directional data synchronization without downtime. Supports AWS, Azure, and Google Cloud natively. Ideal for companies in the middle of a digital transformation journey.">
+                    <div class="product-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>CloudSync</h3>
+                    <p>Seamless cloud integration software that bridges the gap between on-premise and cloud.</p>
                     <a href="#" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
+
             </div>
         </div>
     </section>
+
+    <div id="product-modal" class="modal-overlay">
+        <div class="glass-card modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <div class="modal-header">
+                <div class="product-icon" id="modal-icon">
+                    <i class="fas fa-box"></i>
+                </div>
+                <h3 id="modal-title">Product Title</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modal-desc">Product description goes here...</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#contact" class="btn btn-primary" onclick="closeProductModal()">Request Demo</a>
+            </div>
+        </div>
+    </div>
 
     <section id="about" class="section">
         <div class="container">
@@ -309,7 +331,7 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="copyright-line"></div>
-                <p>&copy; 2025 Orconix. All rights reserved.</p>
+                <p>&copy; 2026 Orconix. All rights reserved.</p>
             </div>
         </div>
     </footer>

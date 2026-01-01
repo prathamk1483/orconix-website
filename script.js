@@ -177,3 +177,59 @@ const observer = new IntersectionObserver((entries) => {
 
 // 4. Tell observer to track all our elements
 scrollElements.forEach((el) => observer.observe(el));
+
+// --- Product Modal Logic ---
+
+const modal = document.getElementById('product-modal');
+const closeModalBtn = document.getElementById('close-modal');
+const productCards = document.querySelectorAll('.product-card');
+
+// Elements inside the modal to update
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const modalIcon = document.getElementById('modal-icon');
+
+// 1. Open Modal on Card Click
+productCards.forEach(card => {
+    // ... inside productCards.forEach ...
+    card.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const title = card.getAttribute('data-title');
+        const desc = card.getAttribute('data-details'); // This now contains HTML
+        const iconClass = card.getAttribute('data-icon');
+        
+        modalTitle.textContent = title;
+        
+        // CHANGED THIS LINE:
+        modalDesc.innerHTML = desc; // Renders HTML tags like <img> and <br>
+        
+        modalIcon.innerHTML = `<i class="${iconClass}"></i>`;
+        
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden'; 
+    });
+});
+
+// 2. Close Modal Function
+function closeProductModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+// 3. Close on 'X' click
+closeModalBtn.addEventListener('click', closeProductModal);
+
+// 4. Close on clicking outside the box (on the overlay)
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeProductModal();
+    }
+});
+
+// 5. Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+        closeProductModal();
+    }
+});
