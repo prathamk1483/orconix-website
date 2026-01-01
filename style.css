@@ -472,10 +472,10 @@ select.dropdown {
 }
 
 /* The Animation Keyframes */
-/* @keyframes scroll {
+@keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } /* Move exactly half-way (one full group length) */
-} */
+}
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
